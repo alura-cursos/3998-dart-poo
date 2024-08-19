@@ -14,7 +14,24 @@ void main() {
 
   print(contaRoberta.saldo);
 
+  receber(contaMatheus, 500);
+  
+  print(contaMatheus.titular);
+  print(contaMatheus.saldo);
 
+  enviar(contaMatheus, 200);
+  print(contaMatheus.titular);
+  print(contaMatheus.saldo);
+
+
+}
+
+void receber(Conta conta, double valor) {
+  conta.saldo += valor;
+}
+
+void enviar(Conta conta, double valor) {
+  conta.saldo -= valor;
 }
 
 class Conta {
