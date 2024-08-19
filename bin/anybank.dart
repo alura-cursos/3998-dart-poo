@@ -17,10 +17,12 @@ void main() {
   contaMatheus.enviar(200);
 
   contaChris.imprimeSaldo();
-  contaChris.receber(100);
+  contaChris.enviar(4300);
   
   contaDenize.imprimeSaldo();
-  contaDenize.enviar(300);
+  contaDenize.enviar(4300);
+  contaDenize.calculaRendimento();
+  contaDenize.imprimeSaldo();
 
 }
 
