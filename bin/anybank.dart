@@ -1,10 +1,20 @@
 
 void main() {
-  List<String> contas = <String>["Matheus", "Roberta"];
-  List<double> saldos = <double>[1000, 1000];
-
   Conta contaMatheus = Conta("Matheus", 1000);
   Conta contaRoberta = Conta("Roberta", 2000);
+
+  List<Conta> contas = <Conta>[contaMatheus, contaRoberta];
+
+  for (Conta conta in contas) {
+    print(conta.titular);
+    print(conta.saldo);
+  }
+
+  contaRoberta.saldo = 5000;
+
+  print(contaRoberta.saldo);
+
+
 }
 
 class Conta {
