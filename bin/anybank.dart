@@ -14,30 +14,32 @@ void main() {
 
   print(contaRoberta.saldo);
 
-  receber(contaMatheus, 500);
+  contaMatheus.receber(500);
   
   print(contaMatheus.titular);
   print(contaMatheus.saldo);
 
-  enviar(contaMatheus, 200);
+  contaMatheus.enviar(200);
   print(contaMatheus.titular);
   print(contaMatheus.saldo);
 
 
 }
 
-void receber(Conta conta, double valor) {
-  conta.saldo += valor;
-}
 
-void enviar(Conta conta, double valor) {
-  conta.saldo -= valor;
-}
 
 class Conta {
   String titular;
   double saldo;
 
   Conta(this.titular, this.saldo);
+
+  void receber(double valor) {
+    saldo += valor;
+  }
+
+  void enviar(double valor) {
+    saldo -= valor;
+  }
 }
 
