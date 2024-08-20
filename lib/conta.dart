@@ -1,4 +1,4 @@
-class Conta {
+abstract class Conta {
   String titular;
   double _saldo;
 
